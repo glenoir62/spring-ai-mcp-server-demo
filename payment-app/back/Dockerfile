@@ -10,18 +10,17 @@ RUN keytool -import -trustcacerts -alias adeo-root-ca \
 
 RUN gradle bootJar
 
-FROM openjdk:21-jdk-slim
+FROM eclipse-temurin:21-jdk-alpine
 RUN addgroup --system spring && adduser --system spring --ingroup spring
 
 # Import the ADEO certificate into the JVM's truststore in the runtime image
 COPY --from=build /home/gradle/src/src/main/resources/certs/ADEO_ROOT_CA1.crt /tmp/ADEO_ROOT_CA1.crt
-RUN apt-get update && apt-get install -y --no-install-recommends curl && \
+RUN apk add --no-cache curl && \
     keytool -import -trustcacerts -alias adeo-root-ca \
     -file /tmp/ADEO_ROOT_CA1.crt \
     -keystore $JAVA_HOME/lib/security/cacerts \
     -storepass changeit -noprompt && \
-    apt-get purge -y --auto-remove curl && \
-    rm -rf /var/lib/apt/lists/* && \
+    apk del curl && \
     rm /tmp/ADEO_ROOT_CA1.crt
 
 USER spring:spring
