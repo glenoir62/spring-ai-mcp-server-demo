@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import {createRouter, createWebHistory} from 'vue-router'
 import IncidentList from '../components/IncidentList.vue'
 import CurrentIncidents from '../components/CurrentIncidents.vue'
 import CreateIncident from '../components/CreateIncident.vue'

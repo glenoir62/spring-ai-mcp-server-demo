@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
-import PaymentService, { type Payment } from './services/PaymentService'
+import {onMounted, ref} from 'vue'
+import PaymentService, {type Payment} from './services/PaymentService'
 import PaymentDetail from './components/PaymentDetail.vue'
 import './App.css'
 

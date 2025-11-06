@@ -2,11 +2,10 @@ package com.adeo.demo.incident.backend.web.dto;
 
 import com.adeo.demo.incident.backend.persistence.IncidentSeverity;
 import com.adeo.demo.incident.backend.persistence.IncidentStatus;
+import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import jakarta.validation.constraints.Size;
 
 /**
  * Data Transfer Object for updating existing incidents.

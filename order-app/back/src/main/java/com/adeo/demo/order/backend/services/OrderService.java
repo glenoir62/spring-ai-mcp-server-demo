@@ -5,13 +5,12 @@ import com.adeo.demo.order.backend.persistence.OrderRepository;
 import com.adeo.demo.order.backend.web.dto.OrderDto;
 import com.adeo.demo.order.backend.web.dto.enums.OrderStatus;
 import com.adeo.demo.order.backend.web.dto.enums.PaymentStatus;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
-
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class OrderService {

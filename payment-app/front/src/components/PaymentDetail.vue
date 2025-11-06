@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { ref, onMounted, computed } from 'vue';
-import PaymentService, { type Payment, type Order } from '../services/PaymentService';
+import {computed, onMounted, ref} from 'vue';
+import PaymentService, {type Order, type Payment} from '../services/PaymentService';
 import './PaymentDetail.css';
 
 // Props

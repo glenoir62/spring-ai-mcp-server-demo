@@ -1,7 +1,13 @@
 package com.adeo.demo.payment.backend.persistence;
 
 import com.adeo.demo.payment.backend.web.dto.enums.PaymentStatus;
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import java.time.LocalDate;
 
 @Entity

@@ -3,7 +3,6 @@ package com.adeo.mcp.server.demo.service.dto;
 import com.adeo.mcp.server.demo.service.dto.enums.IncidentSeverity;
 import com.adeo.mcp.server.demo.service.dto.enums.IncidentStatus;
 import com.fasterxml.jackson.annotation.JsonProperty;
-
 import java.time.LocalDate;
 
 /**

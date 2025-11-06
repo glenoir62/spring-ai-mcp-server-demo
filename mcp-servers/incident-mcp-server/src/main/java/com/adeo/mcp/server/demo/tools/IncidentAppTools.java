@@ -1,16 +1,13 @@
 package com.adeo.mcp.server.demo.tools;
 
 import com.adeo.mcp.server.demo.service.IncidentAppService;
-import com.adeo.mcp.server.demo.service.dto.CreateIncidentDto;
 import com.adeo.mcp.server.demo.service.dto.IncidentDto;
 import com.adeo.mcp.server.demo.service.dto.enums.IncidentSeverity;
 import com.adeo.mcp.server.demo.service.dto.enums.IncidentStatus;
-
+import java.util.List;
 import org.springframework.ai.tool.annotation.Tool;
 import org.springframework.ai.tool.annotation.ToolParam;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 @Service
 public class IncidentAppTools {

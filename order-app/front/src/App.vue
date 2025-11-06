@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import {onMounted, ref} from 'vue'
 import axios from 'axios'
-import { useToast, POSITION } from "vue-toastification"
+import {POSITION, useToast} from "vue-toastification"
 
 interface Order {
   orderId: number

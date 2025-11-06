@@ -4,14 +4,13 @@ import com.adeo.demo.payment.backend.persistence.Payment;
 import com.adeo.demo.payment.backend.persistence.PaymentRepository;
 import com.adeo.demo.payment.backend.web.dto.PaymentDto;
 import com.adeo.demo.payment.backend.web.dto.enums.PaymentStatus;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
-
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class PaymentService {

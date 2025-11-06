@@ -1,8 +1,8 @@
 import './assets/main.css'
 
-import { createApp } from 'vue'
+import {createApp} from 'vue'
 import App from './App.vue'
-import Toast, { POSITION } from "vue-toastification"
+import Toast, {POSITION} from "vue-toastification"
 import "vue-toastification/dist/index.css"
 
 const app = createApp(App)

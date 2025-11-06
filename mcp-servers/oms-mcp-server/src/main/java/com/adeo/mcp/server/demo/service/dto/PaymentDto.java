@@ -2,7 +2,6 @@ package com.adeo.mcp.server.demo.service.dto;
 
 import com.adeo.mcp.server.demo.service.dto.enums.PaymentStatus;
 import com.fasterxml.jackson.annotation.JsonProperty;
-
 import java.time.LocalDate;
 
 /**

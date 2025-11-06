@@ -2,7 +2,6 @@ package com.adeo.mcp.server.demo.service.dto;
 
 import com.adeo.mcp.server.demo.service.dto.enums.OrderStatus;
 import com.adeo.mcp.server.demo.service.dto.enums.PaymentStatus;
-
 import java.time.LocalDate;
 
 public class OrderDto {

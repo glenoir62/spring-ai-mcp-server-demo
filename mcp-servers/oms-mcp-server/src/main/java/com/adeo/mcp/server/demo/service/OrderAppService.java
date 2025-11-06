@@ -1,14 +1,14 @@
 package com.adeo.mcp.server.demo.service;
 
 import com.adeo.mcp.server.demo.service.dto.OrderDto;
+import java.util.Arrays;
+import java.util.List;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestTemplate;
-
-import java.util.List;
 
 @Service
 public class OrderAppService {
@@ -22,7 +22,7 @@ public class OrderAppService {
             return List.of();
         }
 
-        return List.of(orders);
+        return Arrays.asList(orders);
     }
 
     public OrderDto getOrder(Long orderId) {

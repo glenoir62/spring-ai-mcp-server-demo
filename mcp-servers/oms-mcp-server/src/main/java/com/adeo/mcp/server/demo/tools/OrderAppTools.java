@@ -2,14 +2,10 @@ package com.adeo.mcp.server.demo.tools;
 
 import com.adeo.mcp.server.demo.service.OrderAppService;
 import com.adeo.mcp.server.demo.service.dto.OrderDto;
-import com.adeo.mcp.server.demo.service.dto.enums.OrderStatus;
-
+import java.util.List;
 import org.springframework.ai.tool.annotation.Tool;
 import org.springframework.ai.tool.annotation.ToolParam;
 import org.springframework.stereotype.Service;
-
-import java.time.LocalDate;
-import java.util.List;
 
 @Service
 public class OrderAppTools {
