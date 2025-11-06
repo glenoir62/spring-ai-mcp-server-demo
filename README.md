@@ -159,7 +159,42 @@ Check health status: `docker-compose ps`
 
 The real magic happens when you connect AI assistants to control your business operations through conversation!
 
-### 🔧 Quick Setup for VS Code
+### What is MCP?
+
+**Model Context Protocol (MCP)** is an open standard created by Anthropic that enables AI assistants to securely connect to external data sources and tools.
+Think of it as a universal "plugin system" for AI.
+
+#### Key Concepts
+
+**MCP connects three layers:**
+
+**Layer 1: AI Assistants (Clients)**
+- Claude Desktop
+- GitHub Copilot
+- VS Code Chat
+- Any MCP-compatible AI
+
+**Layer 2: MCP Server (Bridge)**
+- Exposes **Resources** (data and documents)
+- Provides **Tools** (executable actions)
+- Offers **Prompts** (reusable templates)
+- Uses JSON-RPC over stdio or HTTP
+
+**Layer 3: Your Business Systems**
+- Databases (PostgreSQL, MongoDB, etc.)
+- REST APIs
+- File systems
+- Third-party services
+
+**Communication Flow:**
+
+```
+User → AI Assistant → MCP Server → Business API → Database
+                ↓                         ↓
+            Natural language      Structured data
+```
+
+### 🔧 Quick Setup for VS Code (you can use also Claude Desktop)
 
 1. **Build the MCP servers** (one-time setup):
 ```bash
@@ -167,6 +202,13 @@ The real magic happens when you connect AI assistants to control your business o
 ./gradlew :mcp-servers:oms-mcp-server:build
 ./gradlew :mcp-servers:incident-mcp-server:build
 ```
+
+### Go to
+chmod +x config-claude.sh
+
+### Launch
+./config-claude.sh
+
 
 2. **Configure VS Code** - Add to your `settings.json`:
 ```json
@@ -257,6 +299,31 @@ docker-compose up --build -d
 **Solution**: This is expected behavior. The H2 databases are in-memory for demo purposes. MongoDB data persists in Docker volumes.
 
 </details>
+
+
+## 📚 Learning Resources
+
+### MCP (Model Context Protocol)
+- 📖 [Official MCP Documentation](https://modelcontextprotocol.io)
+- 💻 [MCP GitHub Repository](https://github.com/modelcontextprotocol)
+- 🎥 [MCP Tutorial Videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNe0pJG5nBJwU0vqW2cPK9dY)
+- 📝 [Building Your First MCP Server](https://modelcontextprotocol.io/tutorials/first-server)
+
+### Spring Boot
+- 📖 [Spring Boot Official Guide](https://spring.io/guides)
+- 💻 [Spring Boot Reference Documentation](https://docs.spring.io/spring-boot/docs/current/reference/html/)
+- 🎥 [Spring Boot Tutorials](https://www.youtube.com/c/SpringSourceDev)
+
+### Vue.js
+- 📖 [Vue 3 Documentation](https://vuejs.org/)
+- 💻 [Vue.js Guide](https://vuejs.org/guide/introduction.html)
+- 🎥 [Vue Mastery Courses](https://www.vuemastery.com/)
+
+### Docker
+- 📖 [Docker Documentation](https://docs.docker.com/)
+- 💻 [Docker Compose Guide](https://docs.docker.com/compose/)
+- 🎥 [Docker Tutorial for Beginners](https://www.youtube.com/watch?v=fqMOX6JJhGo)
+
 
 ## 🎯 What's Next?
 
